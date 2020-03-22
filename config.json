@@ -15,11 +15,13 @@
         "SegmentationClasses": [0,1,2],
         "LogDir": "./tmp/log",
         "CheckpointDir": "./tmp/ckpt",
-        "BatchSize": 32,
+        "BatchSize": 1,
         "PatchShape": [256,256,32],
         "ImageLog": true,
         "Testing": true,
+        "TestStep": 30,
         "Epoches": 99999,
+        "MaxIterations": 15000,
         "LogInterval": 25,
         "Networks": {
             "Name":"VNet",
@@ -41,14 +43,14 @@
     },
     "EvaluationSetting":{
         "Data":{
-            "EvaluateDataDirectory": "./data_3DRA/evaluate",
-            "ImageFilenames": ["CBCT_reg.nii"],
-            "LabelFilename": "label_tf.nii.gz",
+            "EvaluateDataDirectory": "./evaluate",
+            "ImageFilenames": ["image.nii.gz"],
+            "LabelFilename": "label.nii.gz",
             "ProbabilityFilename": "probability_tf.nii.gz"
         },
         "CheckpointPath": "./tmp/ckpt/checkpoint-23125",
         "Stride": [256,256,32],
-        "BatchSize": 10,
+        "BatchSize": 1,
         "ProbabilityOutput":true
     }
 }
