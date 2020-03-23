@@ -1,0 +1,4 @@
+$ python3 main.py -p train --config_json config.json --gpu 0
+$ python3 main.py -p evaluate --config_json config.json --gpu 0
+
+
