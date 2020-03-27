@@ -8,8 +8,8 @@
         "Data": {
             "TrainingDataDirectory":"./data/training",
             "TestingDataDirectory": "./data/testing",
-            "ImageFilenames": ["image.nii.gz"],
-            "LabelFilename": "label.nii.gz"
+            "ImageFilenames": ["image.nii"],
+            "LabelFilename": "label.nii"
         },
         "Restore": true,
         "SegmentationClasses": [0,1,2],
@@ -30,7 +30,7 @@
         "Loss": "weighted_sorensen",
         "Optimizer":{
             "Name": "Adam",
-            "InitialLearningRate": 1e-3,
+            "InitialLearningRate": 5e-3,
             "Momentum":0.9,
             "Decay":{
                 "Factor": 0.8,
@@ -44,11 +44,11 @@
     "EvaluationSetting":{
         "Data":{
             "EvaluateDataDirectory": "./data/evaluate",
-            "ImageFilenames": ["image.nii.gz"],
-            "LabelFilename": "label.nii.gz",
-            "ProbabilityFilename": "probability_tf.nii.gz"
+            "ImageFilenames": ["image.nii"],
+            "LabelFilename": "label.nii",
+            "ProbabilityFilename": "probability_tf.nii"
         },
-        "CheckpointPath": "./tmp/ckpt/checkpoint-9529",
+        "CheckpointPath": "./tmp/ckpt/checkpoint-8440",
         "Stride": [256,256,32],
         "BatchSize": 1,
         "ProbabilityOutput":true

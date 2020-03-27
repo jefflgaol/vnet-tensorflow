@@ -14,7 +14,7 @@ import OutputModule
 import json
 
 # select gpu devices
-# os.environ["CUDA_VISIBLE_DEVICES"] = "1" # e.g. "0,1,2", "0,2" 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1" # e.g. "0,1,2", "0,2" 
 
 # tensorflow app flags
 FLAGS = tf.app.flags.FLAGS
