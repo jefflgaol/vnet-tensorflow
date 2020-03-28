@@ -21,7 +21,7 @@
         "Testing": true,
         "TestStep": 30,
         "Epoches": 99999,
-        "MaxIterations": 15000,
+        "MaxIterations": 30000,
         "LogInterval": 25,
         "Networks": {
             "Name":"VNet",
@@ -30,10 +30,10 @@
         "Loss": "weighted_sorensen",
         "Optimizer":{
             "Name": "Adam",
-            "InitialLearningRate": 5e-3,
+            "InitialLearningRate": 1e-2,
             "Momentum":0.9,
             "Decay":{
-                "Factor": 0.8,
+                "Factor": 0.99,
                 "Steps": 100
             }
         },
